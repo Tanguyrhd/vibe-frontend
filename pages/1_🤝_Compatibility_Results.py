@@ -20,24 +20,24 @@ compatibility_map = {
     "ESFP": ["ISTJ", "ISFJ", "ESFP"],
 }
 
-mbti_description_map = {
-    "INTJ": "Strategic, analytical, independent",
-    "INTP": "Logical, curious, inventive",
-    "ENTJ": "Bold, confident, strategic leaders",
-    "ENTP": "Quick-witted, enthusiastic, inventive",
-    "INFJ": "Idealistic, compassionate, deep thinkers",
-    "INFP": "Empathetic, imaginative, values-driven",
-    "ENFJ": "Charismatic, altruistic, team-focused",
-    "ENFP": "Energetic, imaginative, warm",
-    "ISTJ": "Responsible, sincere, logical",
-    "ISFJ": "Loyal, practical, nurturing",
-    "ESTJ": "Efficient, organized, traditional",
-    "ESFJ": "Sociable, caring, cooperative",
-    "ISTP": "Independent, adaptable, practical",
-    "ISFP": "Gentle, flexible, artistic",
-    "ESTP": "Energetic, pragmatic, spontaneous",
-    "ESFP": "Playful, enthusiastic, friendly",
-}
+# mbti_description_map = {
+#     "INTJ": "Strategic, analytical, independent",
+#     "INTP": "Logical, curious, inventive",
+#     "ENTJ": "Bold, confident, strategic leaders",
+#     "ENTP": "Quick-witted, enthusiastic, inventive",
+#     "INFJ": "Idealistic, compassionate, deep thinkers",
+#     "INFP": "Empathetic, imaginative, values-driven",
+#     "ENFJ": "Charismatic, altruistic, team-focused",
+#     "ENFP": "Energetic, imaginative, warm",
+#     "ISTJ": "Responsible, sincere, logical",
+#     "ISFJ": "Loyal, practical, nurturing",
+#     "ESTJ": "Efficient, organized, traditional",
+#     "ESFJ": "Sociable, caring, cooperative",
+#     "ISTP": "Independent, adaptable, practical",
+#     "ISFP": "Gentle, flexible, artistic",
+#     "ESTP": "Energetic, pragmatic, spontaneous",
+#     "ESFP": "Playful, enthusiastic, friendly",
+# }
 
 st.set_page_config(page_title="Compatibility Results", layout="centered")
 
@@ -96,23 +96,24 @@ else:
     with col1:
         st.success(f"**Person 1:** {mbti_1}")
         # Use the new .description-text class here to show the description bigger and clearer
-        st.markdown(f'<div class="description-text">{mbti_description_map.get(mbti_1, "")}</div>', unsafe_allow_html=True)
+        # st.markdown(f'<div class="description-text">{mbti_description_map.get(mbti_1, "")}</div>', unsafe_allow_html=True)
     with col2:
         st.success(f"**Person 2:** {mbti_2}")
-        st.markdown(f'<div class="description-text">{mbti_description_map.get(mbti_2, "")}</div>', unsafe_allow_html=True)
+        # st.markdown(f'<div class="description-text">{mbti_description_map.get(mbti_2, "")}</div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="opaque-box">', unsafe_allow_html=True)
     compatible = mbti_2 in compatibility_map.get(mbti_1, [])
     # Wrap the subtitle in an opaque-box div for the black background
-    st.markdown('<div class="opaque-box"><h2>🔗 Compatibility Score</h2></div>', unsafe_allow_html=True)
+    st.markdown('<div class="opaque-box"><h2>🤔 Compatibility Score</h2></div>', unsafe_allow_html=True)
+    # st.markdown('<div class="opaque-box"><h2>🔗 Compatibility Score</h2></div>', unsafe_allow_html=True)
     if compatible:
-        st.progress(100)
-        st.success("✅ These personalities are **highly compatible**!")
+        score = 90  # You can customize this score logic
+        st.success(f"✅ Compatibility Score: **{score}%** – Highly compatible!")
         st.markdown("They're likely to share complementary traits that support mutual growth and deep understanding.")
     else:
-        st.progress(30)
-        st.warning("⚠️ These personalities might **clash or require effort**.")
+        score = 40
+        st.warning(f"⚠️ Compatibility Score: **{score}%** – Might clash or require effort.")
         st.markdown("While differences can enrich relationships, communication and understanding will be key for alignment.")
     st.markdown('</div>', unsafe_allow_html=True)
 
