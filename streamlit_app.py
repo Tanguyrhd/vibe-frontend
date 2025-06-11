@@ -87,8 +87,6 @@ if st.button("Get MBTI Results"):
             res1 = classify_personality(tweet1)
             res2 = classify_personality(tweet2)
 
-            # res1 = requests.get("https://vibe-986836536410.europe-west1.run.app/predict", params={"tweet": tweet1}).json()
-            # res2 = requests.get("https://vibe-986836536410.europe-west1.run.app/predict", params={"tweet": tweet2}).json()
             mbti_11 = res1["EI"]["letter"]
             mbti_12 = res1["SN"]["letter"]
             mbti_13 = res1["TF"]["letter"]

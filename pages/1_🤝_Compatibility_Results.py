@@ -112,9 +112,22 @@ else:
     col1, col2 = st.columns(2)
     with col1:
         st.markdown(f'<div class="green-opaque-box"><b>Person 1:</b> {mbti_1}</div>', unsafe_allow_html=True)
-
+        st.markdown("""
+        - **E** for Extraversion
+        - **I** for Introversion
+        - **S** for Sensing
+        - **N** for Intuition
+        """)
     with col2:
         st.markdown(f'<div class="green-opaque-box"><b>Person 1:</b> {mbti_1}</div>', unsafe_allow_html=True)
+        st.markdown("""
+        - **E** for Extraversion
+        - **I** for Introversion
+        - **S** for Sensing
+        - **N** for Intuition
+        """)
+
+    st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('</div>', unsafe_allow_html=True)
     compatible = mbti_2 in compatibility_map.get(mbti_1, [])
