@@ -53,6 +53,24 @@ st.markdown(
     background-position: center;
 }
 
+/* Style for green opaque result boxes */
+.green-opaque-box {
+    background-color: rgba(0, 128, 0, 0.7);
+    padding: 1.2rem;
+    border-radius: 12px;
+    color: white !important;
+    margin-bottom: 1rem;
+}
+
+/* Style for yellow opaque result boxes */
+.yellow-opaque-box {
+    background-color: rgba(255, 255, 0, 0.7);
+    padding: 1.2rem;
+    border-radius: 12px;
+    color: black !important; /* black text for better contrast on yellow */
+    margin-bottom: 1rem;
+}
+
 /* Style for dark opaque content boxes */
 .opaque-box {
     background-color: rgba(0, 0, 0, 0.75);
@@ -90,30 +108,30 @@ if not mbti_1 or not mbti_2:
     st.warning("Please start from the main page to enter tweets.")
     st.page_link("streamlit_app.py", label="← Go to Main Page")
 else:
-    st.markdown('<div class="opaque-box">', unsafe_allow_html=True)
+    # st.markdown('<div class="opaque-box">', unsafe_allow_html=True)
     st.subheader("Your Results")
     col1, col2 = st.columns(2)
     with col1:
-        st.success(f"**Person 1:** {mbti_1}")
+        st.success(f'<div class="green-opaque-box"><b> **Person 1:** {mbti_1}')
         # Use the new .description-text class here to show the description bigger and clearer
         # st.markdown(f'<div class="description-text">{mbti_description_map.get(mbti_1, "")}</div>', unsafe_allow_html=True)
     with col2:
-        st.success(f"**Person 2:** {mbti_2}")
+        st.success(f'<div class="green-opaque-box"><b>**Person 2:** {mbti_2}')
         # st.markdown(f'<div class="description-text">{mbti_description_map.get(mbti_2, "")}</div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
-    st.markdown('<div class="opaque-box">', unsafe_allow_html=True)
+    # st.markdown('<div class="opaque-box">', unsafe_allow_html=True)
     compatible = mbti_2 in compatibility_map.get(mbti_1, [])
     # Wrap the subtitle in an opaque-box div for the black background
     st.markdown('<div class="opaque-box"><h2>🤔 Compatibility Score</h2></div>', unsafe_allow_html=True)
     # st.markdown('<div class="opaque-box"><h2>🔗 Compatibility Score</h2></div>', unsafe_allow_html=True)
     if compatible:
         score = 90  # You can customize this score logic
-        st.success(f"✅ Compatibility Score: **{score}%** – Highly compatible!")
+        st.success(f'<div class="green-opaque-box"><b> ✅ Compatibility Score: **{score}%** – Highly compatible!')
         st.markdown("They're likely to share complementary traits that support mutual growth and deep understanding.")
     else:
         score = 40
-        st.warning(f"⚠️ Compatibility Score: **{score}%** – Might clash or require effort.")
+        st.warning(f'<div class="green-opaque-box"><b>⚠️ Compatibility Score: **{score}%** – Might clash or require effort.')
         st.markdown("While differences can enrich relationships, communication and understanding will be key for alignment.")
     st.markdown('</div>', unsafe_allow_html=True)
 
