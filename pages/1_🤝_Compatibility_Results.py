@@ -112,7 +112,8 @@ else:
     st.subheader("Your Results")
     col1, col2 = st.columns(2)
     with col1:
-        st.success(f'<div class="green-opaque-box"><b> **Person 1:**<b> {mbti_1}')
+        # st.success(f'<div class="green-opaque-box"><b> **Person 1:**<b> {mbti_1}')
+        st.markdown(f'<div class="green-opaque-box"><b>Person 1:</b> {mbti_1}</div>', unsafe_allow_html=True)
         # Use the new .description-text class here to show the description bigger and clearer
         # st.markdown(f'<div class="description-text">{mbti_description_map.get(mbti_1, "")}</div>', unsafe_allow_html=True)
     with col2:
