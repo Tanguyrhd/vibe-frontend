@@ -112,12 +112,11 @@ else:
     st.subheader("Your Results")
     col1, col2 = st.columns(2)
     with col1:
-        # st.success(f'<div class="green-opaque-box"><b> **Person 1:**<b> {mbti_1}')
         st.markdown(f'<div class="green-opaque-box"><b>Person 1:</b> {mbti_1}</div>', unsafe_allow_html=True)
         # Use the new .description-text class here to show the description bigger and clearer
         # st.markdown(f'<div class="description-text">{mbti_description_map.get(mbti_1, "")}</div>', unsafe_allow_html=True)
     with col2:
-        st.success(f'<div class="green-opaque-box"><b>**Person 2:** {mbti_2}')
+        st.markdown(f'<div class="green-opaque-box"><b>Person 1:</b> {mbti_1}</div>', unsafe_allow_html=True)
         # st.markdown(f'<div class="description-text">{mbti_description_map.get(mbti_2, "")}</div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
@@ -128,11 +127,12 @@ else:
     # st.markdown('<div class="opaque-box"><h2>🔗 Compatibility Score</h2></div>', unsafe_allow_html=True)
     if compatible:
         score = 90  # You can customize this score logic
-        st.success(f'<div class="green-opaque-box"><b> ✅ Compatibility Score: **{score}%** – Highly compatible!')
+        st.markdown(f'<div class="yellow-opaque-box"><b>✅ Compatibility Score: {score}% – Highly compatible!</b></div>', unsafe_allow_html=True)
         st.markdown("They're likely to share complementary traits that support mutual growth and deep understanding.")
     else:
         score = 40
-        st.warning(f'<div class="green-opaque-box"><b>⚠️ Compatibility Score: **{score}%** – Might clash or require effort.')
+        st.markdown(f'<div class="yellow-opaque-box"><b>✅ Compatibility Score: {score}% – Highly compatible!</b></div>', unsafe_allow_html=True)
+        # st.warning(f'<div class="yellow-opaque-box"><b>⚠️ Compatibility Score: **{score}%** – Might clash or require effort.')
         st.markdown("While differences can enrich relationships, communication and understanding will be key for alignment.")
     st.markdown('</div>', unsafe_allow_html=True)
 
