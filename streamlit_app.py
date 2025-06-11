@@ -144,7 +144,7 @@ if st.button("Get MBTI Results"):
                 st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_24} ?<br> </b> {explanation_24}</div>', unsafe_allow_html=True)
             st.markdown("---")
 
-            st.markdown(f'<div class="blue-opaque-box"><b> SEE COMPATIBILITY </b> <br> {st.page_link("pages/1_🤝_Compatibility_Results.py", label="➡️ CLICK HERE")}', unsafe_allow_html=True)
+            st.markdown(f'<div class="blue-opaque-box"><b> SEE COMPATIBILITY </b>', unsafe_allow_html=True)
             st.page_link("pages/1_🤝_Compatibility_Results.py", label="➡️ CLICK HERE")
 
         except Exception as e:
