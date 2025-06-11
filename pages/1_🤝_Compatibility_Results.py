@@ -108,31 +108,23 @@ if not mbti_1 or not mbti_2:
     st.warning("Please start from the main page to enter tweets.")
     st.page_link("streamlit_app.py", label="← Go to Main Page")
 else:
-    # st.markdown('<div class="opaque-box">', unsafe_allow_html=True)
     st.subheader("Your Results")
     col1, col2 = st.columns(2)
     with col1:
         st.markdown(f'<div class="green-opaque-box"><b>Person 1:</b> {mbti_1}</div>', unsafe_allow_html=True)
-        # Use the new .description-text class here to show the description bigger and clearer
-        # st.markdown(f'<div class="description-text">{mbti_description_map.get(mbti_1, "")}</div>', unsafe_allow_html=True)
+
     with col2:
         st.markdown(f'<div class="green-opaque-box"><b>Person 1:</b> {mbti_1}</div>', unsafe_allow_html=True)
-        # st.markdown(f'<div class="description-text">{mbti_description_map.get(mbti_2, "")}</div>', unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
 
-    # st.markdown('<div class="opaque-box">', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
     compatible = mbti_2 in compatibility_map.get(mbti_1, [])
-    # Wrap the subtitle in an opaque-box div for the black background
     st.markdown('<div class="opaque-box"><h2>🤔 Compatibility Score</h2></div>', unsafe_allow_html=True)
-    # st.markdown('<div class="opaque-box"><h2>🔗 Compatibility Score</h2></div>', unsafe_allow_html=True)
     if compatible:
-        score = 90  # You can customize this score logic
-        st.markdown(f'<div class="yellow-opaque-box"><b>✅ Compatibility Score: {score}% – Highly compatible!</b></div>', unsafe_allow_html=True)
-        st.markdown("They're likely to share complementary traits that support mutual growth and deep understanding.")
+        score = 90
+        st.markdown(f"<div class='yellow-opaque-box'><b>✅ Compatibility Score: {score}% – Highly compatible!</b> <br> They're likely to share complementary traits that support mutual growth and deep understanding.</div>", unsafe_allow_html=True)
     else:
         score = 40
         st.markdown(f'<div class="yellow-opaque-box"><b>✅ Compatibility Score: {score}% – Highly compatible!</b> <br> While differences can enrich relationships, communication and understanding will be key for alignment. </div>', unsafe_allow_html=True)
-        st.markdown("While differences can enrich relationships, communication and understanding will be key for alignment.")
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.page_link("streamlit_app.py", label="← Try with different tweets", icon="🔁")
