@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+from function import classify_personality
 
 st.set_page_config(page_title="MBTI Predictor", layout="centered")
 
@@ -73,23 +74,55 @@ with col2:
 if st.button("Get MBTI Results"):
     if tweet1 and tweet2:
         try:
-            res1 = requests.get("https://vibe-986836536410.europe-west1.run.app/predict", params={"tweet": tweet1}).json()
-            res2 = requests.get("https://vibe-986836536410.europe-west1.run.app/predict", params={"tweet": tweet2}).json()
 
-            mbti_1 = res1["MBTI personality result"].upper()
-            mbti_2 = res2["MBTI personality result"].upper()
+            res1 = classify_personality(tweet1)
+            res2 = classify_personality(tweet2)
+
+            # res1 = requests.get("https://vibe-986836536410.europe-west1.run.app/predict", params={"tweet": tweet1}).json()
+            # res2 = requests.get("https://vibe-986836536410.europe-west1.run.app/predict", params={"tweet": tweet2}).json()
+
+            mbti_11 = res1["EI"]["letter"]
+            mbti_12 = res1["SN"]["letter"]
+            mbti_13 = res1["TF"]["letter"]
+            mbti_14 = res1["JP"]["letter"]
+
+            conf_11 = res1["EI"]["confidence"]
+            conf_12 = res1["SN"]["confidence"]
+            conf_13 = res1["TF"]["confidence"]
+            conf_14 = res1["JP"]["confidence"]
+
+            explanation_11 = res1["EI"]["explanation"]
+            explanation_12 = res1["SN"]["explanation"]
+            explanation_13 = res1["TF"]["explanation"]
+            explanation_14 = res1["JP"]["explanation"]
+
+            mbti_21 = res2["EI"]["letter"]
+            mbti_22 = res2["SN"]["letter"]
+            mbti_23 = res2["TF"]["letter"]
+            mbti_24 = res2["JP"]["letter"]
+
+            conf_21 = res2["EI"]["confidence"]
+            conf_22 = res2["SN"]["confidence"]
+            conf_23 = res2["TF"]["confidence"]
+            conf_24 = res2["JP"]["confidence"]
+
+            explanation_21 = res2["EI"]["explanation"]
+            explanation_22 = res2["SN"]["explanation"]
+            explanation_23 = res2["TF"]["explanation"]
+            explanation_24 = res2["JP"]["explanation"]
+
 
             st.session_state["tweet1"] = tweet1
             st.session_state["tweet2"] = tweet2
-            st.session_state["mbti_1"] = mbti_1
-            st.session_state["mbti_2"] = mbti_2
+            st.session_state["mbti_1"] = mbti_11 + mbti_12 + mbti_13 + mbti_14
+            st.session_state["mbti_2"] = mbti_21 + mbti_22 + mbti_23 + mbti_24
 
             st.markdown('<div class="opaque-box"><h3>🧠 Predictions</h3></div>', unsafe_allow_html=True)
             col1, col2 = st.columns(2)
             with col1:
-                st.markdown(f'<div class="green-opaque-box"><b>Tweet from Person 1:</b> {mbti_1}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="green-opaque-box"><b>Tweet from Person 1:</b> {mbti_11 + mbti_12 + mbti_13 + mbti_14}</div>', unsafe_allow_html=True)
             with col2:
-                st.markdown(f'<div class="green-opaque-box"><b>Tweet from Person 2:</b> {mbti_2}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="green-opaque-box"><b>Tweet from Person 2:</b> {mbti_21 + mbti_22 + mbti_23 + mbti_24}</div>', unsafe_allow_html=True)
 
             st.markdown("---")
             st.page_link("pages/1_🤝_Compatibility_Results.py", label="See Compatibility →")
