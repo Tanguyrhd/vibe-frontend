@@ -108,10 +108,8 @@ if not mbti_1 or not mbti_2:
     st.warning("Please start from the main page to enter tweets.")
     st.page_link("streamlit_app.py", label="← Go to Main Page")
 else:
-    st.subheader("Your Results")
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown(f'<div class="green-opaque-box"><b>Person 1:</b> {mbti_1}</div>', unsafe_allow_html=True)
         st.markdown("""
         - **E** for Extraversion
         - **I** for Introversion
@@ -119,13 +117,18 @@ else:
         - **N** for Intuition
         """)
     with col2:
-        st.markdown(f'<div class="green-opaque-box"><b>Person 1:</b> {mbti_1}</div>', unsafe_allow_html=True)
         st.markdown("""
-        - **E** for Extraversion
-        - **I** for Introversion
-        - **S** for Sensing
-        - **N** for Intuition
+        - **T** for Thinking
+        - **F** for Feeling
+        - **J** for Judging
+        - **P** for Perceiving
         """)
+    st.subheader("Your Results")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown(f'<div class="green-opaque-box"><b>Person 1:</b> {mbti_1}</div>', unsafe_allow_html=True)
+    with col2:
+        st.markdown(f'<div class="green-opaque-box"><b>Person 1:</b> {mbti_1}</div>', unsafe_allow_html=True)
 
     st.markdown('</div>', unsafe_allow_html=True)
 
