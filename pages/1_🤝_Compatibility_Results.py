@@ -124,7 +124,7 @@ else:
         st.markdown(f"<div class='yellow-opaque-box'><b>✅ Compatibility Score: {score}% – Highly compatible!</b> <br> They're likely to share complementary traits that support mutual growth and deep understanding.</div>", unsafe_allow_html=True)
     else:
         score = 40
-        st.markdown(f'<div class="yellow-opaque-box"><b>✅ Compatibility Score: {score}% – Highly compatible!</b> <br> While differences can enrich relationships, communication and understanding will be key for alignment. </div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="yellow-opaque-box"><b>✅ Compatibility Score: {score}% – Might clash or require effort.</b> <br> While differences can enrich relationships, communication and understanding will be key for alignment. </div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.page_link("streamlit_app.py", label="← Try with different tweets", icon="🔁")
