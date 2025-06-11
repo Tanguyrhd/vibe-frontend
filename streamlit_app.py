@@ -54,7 +54,7 @@ html, body, .stApp, .opaque-box, .green-opaque-box, h1, h2, h3, h4, h5, h6, p, s
 )
 
 # Title & Description
-st.markdown('<div class="opaque-box"><h1>🧠 Project Vibe: MBTI Tweet Classifier</h1></div>', unsafe_allow_html=True)
+st.markdown('<div class="opaque-box"><h1>🧠 Project Vibes: MBTI Tweet Classifier</h1></div>', unsafe_allow_html=True)
 st.markdown('<div class="opaque-box">Paste <b>two tweets</b> from different people and we\'ll predict their personalities.</div>', unsafe_allow_html=True)
 
 # Initialize session state
