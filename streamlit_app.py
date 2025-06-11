@@ -120,10 +120,10 @@ if st.button("Get MBTI Results"):
             col1, col2 = st.columns(2)
             with col1:
                 st.markdown(f'<div class="green-opaque-box"><b>Tweet from Person 1:</b> {mbti_11 + mbti_12 + mbti_13 + mbti_14}</div>', unsafe_allow_html=True)
-                st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_11} ?:</b> {explanation_11}</div>', unsafe_allow_html=True)
-                st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_12} ?:</b> {explanation_12}</div>', unsafe_allow_html=True)
-                st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_13} ?:</b> {explanation_13}</div>', unsafe_allow_html=True)
-                st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_14} ?:</b> {explanation_14}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_11} ?<br> </b> {explanation_11}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_12} ?<br> </b> {explanation_12}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_13} ?<br> </b> {explanation_13}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_14} ?<br> </b> {explanation_14}</div>', unsafe_allow_html=True)
 
             with col2:
                 st.markdown(f'<div class="green-opaque-box"><b>Tweet from Person 2:</b> {mbti_21 + mbti_22 + mbti_23 + mbti_24}</div>', unsafe_allow_html=True)
