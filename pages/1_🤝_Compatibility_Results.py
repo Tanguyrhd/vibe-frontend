@@ -131,8 +131,7 @@ else:
         st.markdown("They're likely to share complementary traits that support mutual growth and deep understanding.")
     else:
         score = 40
-        st.markdown(f'<div class="yellow-opaque-box"><b>✅ Compatibility Score: {score}% – Highly compatible!</b></div>', unsafe_allow_html=True)
-        # st.warning(f'<div class="yellow-opaque-box"><b>⚠️ Compatibility Score: **{score}%** – Might clash or require effort.')
+        st.markdown(f'<div class="yellow-opaque-box"><b>✅ Compatibility Score: {score}% – Highly compatible!</b></div> <br> While differences can enrich relationships, communication and understanding will be key for alignment.', unsafe_allow_html=True)
         st.markdown("While differences can enrich relationships, communication and understanding will be key for alignment.")
     st.markdown('</div>', unsafe_allow_html=True)
 
