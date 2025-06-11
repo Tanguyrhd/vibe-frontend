@@ -89,6 +89,7 @@ if st.button("Get MBTI Results"):
             conf_12 = res1["SN"]["confidence"]
             conf_13 = res1["TF"]["confidence"]
             conf_14 = res1["JP"]["confidence"]
+            conf_1 = (conf_11 + conf_12 + conf_13 + conf_14)/4
 
             explanation_11 = res1["EI"]["explanation"]
             explanation_12 = res1["SN"]["explanation"]
@@ -104,6 +105,7 @@ if st.button("Get MBTI Results"):
             conf_22 = res2["SN"]["confidence"]
             conf_23 = res2["TF"]["confidence"]
             conf_24 = res2["JP"]["confidence"]
+            conf_2 = (conf_21 + conf_22 + conf_23 + conf_24)/4
 
             explanation_21 = res2["EI"]["explanation"]
             explanation_22 = res2["SN"]["explanation"]
@@ -119,14 +121,14 @@ if st.button("Get MBTI Results"):
             st.markdown('<div class="opaque-box"><h3>🧠 Predictions</h3></div>', unsafe_allow_html=True)
             col1, col2 = st.columns(2)
             with col1:
-                st.markdown(f'<div class="green-opaque-box"><b>Tweet from Person 1:</b> {mbti_11 + mbti_12 + mbti_13 + mbti_14}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="green-opaque-box"><b>Tweet from Person 1:</b> {mbti_11 + mbti_12 + mbti_13 + mbti_14} <br> with a confidence of {conf_1}</div>', unsafe_allow_html=True)
                 st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_11} ?<br> </b> {explanation_11}</div>', unsafe_allow_html=True)
                 st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_12} ?<br> </b> {explanation_12}</div>', unsafe_allow_html=True)
                 st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_13} ?<br> </b> {explanation_13}</div>', unsafe_allow_html=True)
                 st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_14} ?<br> </b> {explanation_14}</div>', unsafe_allow_html=True)
 
             with col2:
-                st.markdown(f'<div class="green-opaque-box"><b>Tweet from Person 2:</b> {mbti_21 + mbti_22 + mbti_23 + mbti_24}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="green-opaque-box"><b>Tweet from Person 2:</b> {mbti_21 + mbti_22 + mbti_23 + mbti_24} <br> with a confidence of {conf_2}</div>', unsafe_allow_html=True)
                 st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_21} ?<br> </b> {explanation_21}</div>', unsafe_allow_html=True)
                 st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_22} ?<br> </b> {explanation_22}</div>', unsafe_allow_html=True)
                 st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_23} ?<br> </b> {explanation_23}</div>', unsafe_allow_html=True)
