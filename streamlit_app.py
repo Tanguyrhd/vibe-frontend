@@ -80,42 +80,49 @@ if st.button("Get MBTI Results"):
 
             # res1 = requests.get("https://vibe-986836536410.europe-west1.run.app/predict", params={"tweet": tweet1}).json()
             # res2 = requests.get("https://vibe-986836536410.europe-west1.run.app/predict", params={"tweet": tweet2}).json()
-
+            st.write("1")
             mbti_11 = res1["EI"]["letter"]
             mbti_12 = res1["SN"]["letter"]
             mbti_13 = res1["TF"]["letter"]
             mbti_14 = res1["JP"]["letter"]
+            st.write("2")
 
             conf_11 = res1["EI"]["confidence"]
             conf_12 = res1["SN"]["confidence"]
             conf_13 = res1["TF"]["confidence"]
             conf_14 = res1["JP"]["confidence"]
+            st.write("3")
 
             explanation_11 = res1["EI"]["explanation"]
             explanation_12 = res1["SN"]["explanation"]
             explanation_13 = res1["TF"]["explanation"]
             explanation_14 = res1["JP"]["explanation"]
+            st.write("4")
 
             mbti_21 = res2["EI"]["letter"]
             mbti_22 = res2["SN"]["letter"]
             mbti_23 = res2["TF"]["letter"]
             mbti_24 = res2["JP"]["letter"]
+            st.write("5")
 
             conf_21 = res2["EI"]["confidence"]
             conf_22 = res2["SN"]["confidence"]
             conf_23 = res2["TF"]["confidence"]
             conf_24 = res2["JP"]["confidence"]
+            st.write("6")
 
             explanation_21 = res2["EI"]["explanation"]
             explanation_22 = res2["SN"]["explanation"]
             explanation_23 = res2["TF"]["explanation"]
             explanation_24 = res2["JP"]["explanation"]
+            st.write("7")
 
 
             st.session_state["tweet1"] = tweet1
             st.session_state["tweet2"] = tweet2
             st.session_state["mbti_1"] = mbti_11 #+ mbti_12 + mbti_13 + mbti_14
             st.session_state["mbti_2"] = mbti_21 #+ mbti_22 + mbti_23 + mbti_24
+            st.write("8")
 
             st.markdown('<div class="opaque-box"><h3>🧠 Predictions</h3></div>', unsafe_allow_html=True)
             col1, col2 = st.columns(2)
