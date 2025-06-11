@@ -127,6 +127,10 @@ if st.button("Get MBTI Results"):
 
             with col2:
                 st.markdown(f'<div class="green-opaque-box"><b>Tweet from Person 2:</b> {mbti_21 + mbti_22 + mbti_23 + mbti_24}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_21} ?<br> </b> {explanation_21}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_22} ?<br> </b> {explanation_22}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_23} ?<br> </b> {explanation_23}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_24} ?<br> </b> {explanation_24}</div>', unsafe_allow_html=True)
             st.markdown("---")
             st.page_link("pages/1_🤝_Compatibility_Results.py", label="See Compatibility →")
 
