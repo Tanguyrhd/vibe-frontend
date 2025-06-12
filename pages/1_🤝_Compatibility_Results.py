@@ -152,24 +152,3 @@ else:
 
 st.markdown(f'<div class="blue-opaque-box"><b> SEE EXPLANATION </b>', unsafe_allow_html=True)
 st.page_link("pages/Explanation.py", label="➡️ CLICK HERE")
-
-st.markdown("""
-    <style>
-    .custom-link-button {
-        display: inline-block;
-        background-color: black;
-        color: white !important;
-        padding: 0.6em 1.2em;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background-color 0.3s;
-    }
-
-    .custom-link-button:hover {
-        background-color: #333333;
-    }
-    </style>
-
-    <a href="/Explanation" class="custom-link-button">➡️ CLICK HERE</a>
-""", unsafe_allow_html=True)
