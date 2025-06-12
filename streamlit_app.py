@@ -76,6 +76,7 @@ if "tweet2" not in st.session_state:
 # Inputs
 col1, col2 = st.columns(2)
 with col1:
+    st.markdown('<div class="black-box">', unsafe_allow_html=True)
     tweet1 = st.text_area("Tweet from one person", value=st.session_state["tweet1"], key="input1")
 with col2:
     tweet2 = st.text_area("Tweet from another person", value=st.session_state["tweet2"], key="input2")
