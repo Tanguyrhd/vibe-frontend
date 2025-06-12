@@ -108,10 +108,9 @@ else:
 
     st.markdown(f"""<div class="green-opaque-box">
                 <span style="font-size:1.5em">
-                <b>Tweet from Person 1:</b> {mbti_1} <br>
-                with a confidence of {conf_1}%</div>""", unsafe_allow_html=True)
+                <b>Tweet from Person 1:</b> {mbti_1}""", unsafe_allow_html=True)
     st.markdown(f"""<div class="opaque-box">
-                <span style="font-size:1.5em">
+                <span style="font-size:1.2em">
                 <b>Why the {mbti_11} ?</b> <br>
                     {explanation_11} <br>
                     <br>
@@ -127,11 +126,10 @@ else:
 
 
     st.markdown(f"""<div class="green-opaque-box">
-                <span style="font-size:1.5em">
-                <b>Tweet from Person 2:</b> {mbti_2} <br>
-                with a confidence of {conf_2}%</div>""", unsafe_allow_html=True)
+                <span style="font-size:1.5m">
+                <b>Tweet from Person 2:</b> {mbti_2}""", unsafe_allow_html=True)
     st.markdown(f"""<div class="opaque-box">
-                <span style="font-size:1.5em">
+                <span style="font-size:1.2em">
                 <b>Why the {mbti_21} ?</b> <br>
                 {explanation_21} <br>
                 <br>
