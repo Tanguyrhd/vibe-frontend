@@ -105,46 +105,45 @@ else:
     """, unsafe_allow_html=True)
 
     st.subheader("Your Results")
-    col1, col2 = st.columns(2)
-    with col1:
-        st.markdown(f"""<div class="green-opaque-box">
-                    <span style="font-size:1.5em">
-                    <b>Tweet from Person 1:</b> {mbti_1} <br>
-                    with a confidence of {conf_1}%</div>""", unsafe_allow_html=True)
-        st.markdown(f"""<div class="opaque-box">
-                    <span style="font-size:1.5em">
-                    <b>Why the {mbti_11} ?</b> <br>
-                     {explanation_11} <br>
-                     <br>
-                     <b>Why the {mbti_12} ?<br> </b>
-                     {explanation_12} <br>
-                     <br>
-                     <b>Why the {mbti_13} ?<br> </b>
-                     {explanation_13} <br>
-                     <br>
-                     <b>Why the {mbti_14} ?<br> </b>
-                     {explanation_14} <br>
-                     </div>""", unsafe_allow_html=True)
 
-    with col2:
-        st.markdown(f"""<div class="green-opaque-box">
-                    <span style="font-size:1.5em">
-                    <b>Tweet from Person 2:</b> {mbti_2} <br>
-                    with a confidence of {conf_2}%</div>""", unsafe_allow_html=True)
-        st.markdown(f"""<div class="opaque-box">
-                    <span style="font-size:1.5em">
-                    <b>Why the {mbti_21} ?</b> <br>
-                    {explanation_21} <br>
+    st.markdown(f"""<div class="green-opaque-box">
+                <span style="font-size:1.5em">
+                <b>Tweet from Person 1:</b> {mbti_1} <br>
+                with a confidence of {conf_1}%</div>""", unsafe_allow_html=True)
+    st.markdown(f"""<div class="opaque-box">
+                <span style="font-size:1.5em">
+                <b>Why the {mbti_11} ?</b> <br>
+                    {explanation_11} <br>
                     <br>
-                    <b>Why the {mbti_22} ?<br> </b>
-                    {explanation_22} <br>
+                    <b>Why the {mbti_12} ?<br> </b>
+                    {explanation_12} <br>
                     <br>
-                    <b>Why the {mbti_23} ?<br> </b>
-                    {explanation_23} <br>
+                    <b>Why the {mbti_13} ?<br> </b>
+                    {explanation_13} <br>
                     <br>
-                    <b>Why the {mbti_24} ?<br> </b>
-                    {explanation_24} <br>
+                    <b>Why the {mbti_14} ?<br> </b>
+                    {explanation_14} <br>
                     </div>""", unsafe_allow_html=True)
+
+
+    st.markdown(f"""<div class="green-opaque-box">
+                <span style="font-size:1.5em">
+                <b>Tweet from Person 2:</b> {mbti_2} <br>
+                with a confidence of {conf_2}%</div>""", unsafe_allow_html=True)
+    st.markdown(f"""<div class="opaque-box">
+                <span style="font-size:1.5em">
+                <b>Why the {mbti_21} ?</b> <br>
+                {explanation_21} <br>
+                <br>
+                <b>Why the {mbti_22} ?<br> </b>
+                {explanation_22} <br>
+                <br>
+                <b>Why the {mbti_23} ?<br> </b>
+                {explanation_23} <br>
+                <br>
+                <b>Why the {mbti_24} ?<br> </b>
+                {explanation_24} <br>
+                </div>""", unsafe_allow_html=True)
 
     st.markdown("---")
     st.markdown(f'<div class="blue-opaque-box"><b> SEE COMPATIBILITY </b>', unsafe_allow_html=True)
