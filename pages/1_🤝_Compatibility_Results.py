@@ -71,6 +71,15 @@ st.markdown(
     margin-bottom: 1rem;
 }
 
+/* Style for red opaque result boxes */
+.red-opaque-box {
+    background-color: rgba(255, 0, 0, 0.7);
+    padding: 1.2rem;
+    border-radius: 12px;
+    color: white !important; /* white text for better contrast on red */
+    margin-bottom: 1rem;
+}
+
 /* Style for dark opaque content boxes */
 .opaque-box {
     background-color: rgba(0, 0, 0, 0.75);
@@ -126,13 +135,13 @@ else:
     st.markdown('<div class="opaque-box"><h2>🤔 Compatibility Score</h2></div>', unsafe_allow_html=True)
     if compatible:
         score = 90
-        st.markdown(f"""<div class='yellow-opaque-box'>
+        st.markdown(f"""<div class='green-opaque-box'>
                     <span style="font-size:1.5em">
                     <b>✅ Compatibility Score: {score}% – Highly compatible!</b> <br>
                     They're likely to share complementary traits that support mutual growth and deep understanding.</div>""", unsafe_allow_html=True)
     else:
         score = 40
-        st.markdown(f"""<div class="yellow-opaque-box">
+        st.markdown(f"""<div class="red-opaque-box">
                     <span style="font-size:1.5em">
                     <b>✅ Compatibility Score: {score}% – Might clash or require effort.</b> <br>
                     While differences can enrich relationships, communication and understanding will be key for alignment. </div>""", unsafe_allow_html=True)
