@@ -147,5 +147,5 @@ else:
                     </div>""", unsafe_allow_html=True)
 
     st.markdown("---")
-    st.markdown(f'<div class="blue-opaque-box"><b> SEE EXPLANATION </b>', unsafe_allow_html=True)
+    st.markdown(f'<div class="blue-opaque-box"><b> SEE COMPATIBILITY </b>', unsafe_allow_html=True)
     st.page_link("pages/1_🤝_Compatibility_Results.py", label="➡️ CLICK HERE")
