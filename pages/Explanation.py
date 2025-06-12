@@ -137,4 +137,7 @@ else:
                 <b>Why the {mbti_24} ?<br> </b>
                 {explanation_24} <br>
                 </div>""", unsafe_allow_html=True)
+
     st.markdown("---")
+    st.markdown(f'<div class="blue-opaque-box"><b> SEE EXPLANATION </b>', unsafe_allow_html=True)
+    st.page_link("pages/Explanation.py", label="➡️ CLICK HERE")
