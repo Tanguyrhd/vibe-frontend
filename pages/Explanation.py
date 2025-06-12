@@ -126,7 +126,7 @@ else:
 
 
     st.markdown(f"""<div class="green-opaque-box">
-                <span style="font-size:1.5m">
+                <span style="font-size:1.5em">
                 <b>Tweet from Person 2:</b> {mbti_2}""", unsafe_allow_html=True)
     st.markdown(f"""<div class="opaque-box">
                 <span style="font-size:1.2em">
