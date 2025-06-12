@@ -111,6 +111,7 @@ else:
         st.markdown(f"""<div class="green-opaque-box">
                     <b>Why the {mbti_11} ?</b> <br>
                      {explanation_11} <br>
+                     <br>
                      <b>Why the {mbti_12} ?<br> </b>
                      {explanation_12} <br>
                      </div>""", unsafe_allow_html=True)
