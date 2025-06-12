@@ -151,4 +151,4 @@ else:
     st.page_link("streamlit_app.py", label="← Try with different tweets", icon="🔁")
 
 st.markdown(f'<div class="blue-opaque-box"><b> SEE EXPLANATION </b>', unsafe_allow_html=True)
-st.page_link(f'<div class="blue-opaque-box">pages/Explanation.py', label="➡️ CLICK HERE")
+st.page_link("pages/Explanation.py", label="➡️ CLICK HERE")
