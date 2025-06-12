@@ -146,8 +146,8 @@ if st.button("Get MBTI Results"):
 
             st.markdown('<div class="opaque-box"><h3>🧠 Predictions</h3></div>', unsafe_allow_html=True)
             col1, col2 = st.columns(2)
-            conf_1 = "87%"
-            conf_2 = "91%"
+            # conf_1 = "87%"
+            # conf_2 = "91%"
             with col1:
                 st.markdown(f"""<div class="green-opaque-box">
                             <span style="font-size:1.5em">
