@@ -76,11 +76,26 @@ if "tweet2" not in st.session_state:
 # Inputs
 col1, col2 = st.columns(2)
 with col1:
-    st.markdown('<div class="black-box">', unsafe_allow_html=True)
     tweet1 = st.text_area("Tweet from one person", value=st.session_state["tweet1"], key="input1")
 with col2:
     tweet2 = st.text_area("Tweet from another person", value=st.session_state["tweet2"], key="input2")
+st.markdown("""
+    <style>
+    div.stButton > button {
+        background-color: black;
+        color: white;
+        border-radius: 8px;
+        padding: 0.6em 1.2em;
+        font-weight: bold;
+        border: none;
+    }
 
+    div.stButton > button:hover {
+        background-color: #333333;
+        color: #ffffff;
+    }
+    </style>
+""", unsafe_allow_html=True)
 if st.button("Get MBTI Results"):
     if tweet1 and tweet2:
         try:
