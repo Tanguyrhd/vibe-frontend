@@ -114,8 +114,15 @@ else:
                      <br>
                      <b>Why the {mbti_12} ?<br> </b>
                      {explanation_12} <br>
+                     <br>
+                     <b>Why the {mbti_13} ?<br> </b>
+                     {explanation_13} <br>
+                     <br>
+                     <b>Why the {mbti_14} ?<br> </b>
+                     {explanation_14} <br>
+                     <br>
                      </div>""", unsafe_allow_html=True)
-        st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_12} ?<br> </b> {explanation_12}</div>', unsafe_allow_html=True)
+
         st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_13} ?<br> </b> {explanation_13}</div>', unsafe_allow_html=True)
         st.markdown(f'<div class="green-opaque-box"><b>Why the {mbti_14} ?<br> </b> {explanation_14}</div>', unsafe_allow_html=True)
 
