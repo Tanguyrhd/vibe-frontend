@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(page_title="Explanation", layout="centered")
+st.set_page_config(page_title="Results Explanation", layout="centered")
 
 # Inject background image and opaque box style, plus green opaque box style
 st.markdown(
@@ -109,6 +109,7 @@ else:
     with col1:
         st.markdown(f'<div class="green-opaque-box"><b>Tweet from Person 1:</b> {mbti_1} <br> with a confidence of {conf_1}%</div>', unsafe_allow_html=True)
         st.markdown(f"""<div class="opaque-box">
+                    <span style="font-size:1.5em">
                     <b>Why the {mbti_11} ?</b> <br>
                      {explanation_11} <br>
                      <br>
@@ -125,19 +126,20 @@ else:
     with col2:
         st.markdown(f'<div class="green-opaque-box"><b>Tweet from Person 2:</b> {mbti_2} <br> with a confidence of {conf_2}%</div>', unsafe_allow_html=True)
         st.markdown(f"""<div class="opaque-box">
-            <b>Why the {mbti_21} ?</b> <br>
-                {explanation_21} <br>
-                <br>
-                <b>Why the {mbti_22} ?<br> </b>
-                {explanation_22} <br>
-                <br>
-                <b>Why the {mbti_23} ?<br> </b>
-                {explanation_23} <br>
-                <br>
-                <b>Why the {mbti_24} ?<br> </b>
-                {explanation_24} <br>
-                </div>""", unsafe_allow_html=True)
+                    <span style="font-size:1.5em">
+                    <b>Why the {mbti_21} ?</b> <br>
+                    {explanation_21} <br>
+                    <br>
+                    <b>Why the {mbti_22} ?<br> </b>
+                    {explanation_22} <br>
+                    <br>
+                    <b>Why the {mbti_23} ?<br> </b>
+                    {explanation_23} <br>
+                    <br>
+                    <b>Why the {mbti_24} ?<br> </b>
+                    {explanation_24} <br>
+                    </div>""", unsafe_allow_html=True)
 
     st.markdown("---")
     st.markdown(f'<div class="blue-opaque-box"><b> SEE EXPLANATION </b>', unsafe_allow_html=True)
-    st.page_link("pages/Explanation.py", label="➡️ CLICK HERE")
+    st.page_link("pages/1_🤝_Compatibility_Results.py", label="➡️ CLICK HERE")
