@@ -96,10 +96,10 @@ if not mbti_1 or not mbti_2:
 else:
     st.markdown("""
     <span style="font-size:1.5em">
-    - <b>E</b> for Extraversion  VS  <b>I</b> for Introversion
-    - <b>S</b> for Sensing  VS  <b>N</b> for Intuition
-    - <b>T</b> for Thinking  VS  <b>F</b> for Feeling
-    - <b>J</b> for Judging  VS  <b>P</b> for Perceiving
+    - <b>E</b> for Extraversion  VS  <b>I</b> for Introversion <br>
+    - <b>S</b> for Sensing  VS  <b>N</b> for Intuition <br>
+    - <b>T</b> for Thinking  VS  <b>F</b> for Feeling <br>
+    - <b>J</b> for Judging  VS  <b>P</b> for Perceiving <br>
     </span>
     """, unsafe_allow_html=True)
 
