@@ -115,7 +115,9 @@ else:
                     <span style="font-size:1.5em">
                     <b>Person 1:</b> {mbti_1}</div>""", unsafe_allow_html=True)
     with col2:
-        st.markdown(f'<div class="green-opaque-box"><b>Person 1:</b> {mbti_2}</div>', unsafe_allow_html=True)
+        st.markdown(f"""<div class="green-opaque-box">
+                    <span style="font-size:1.5em">
+                    <b>Person 1:</b> {mbti_2}</div>""", unsafe_allow_html=True)
 
     st.markdown('</div>', unsafe_allow_html=True)
 
