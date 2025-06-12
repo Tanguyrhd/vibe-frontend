@@ -108,7 +108,7 @@ else:
     col1, col2 = st.columns(2)
     with col1:
         st.markdown(f'<div class="green-opaque-box"><b>Tweet from Person 1:</b> {mbti_1} <br> with a confidence of {conf_1}%</div>', unsafe_allow_html=True)
-        st.markdown("""<div class="green-opaque-box">
+        st.markdown(f"""<div class="green-opaque-box">
                     <b>Why the {mbti_11} ?</b> <br>
                      {explanation_11} <br>
                      <b>Why the {mbti_12} ?<br> </b>
