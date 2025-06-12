@@ -185,7 +185,7 @@ if st.button("Get MBTI Results"):
                         <style>
                         .custom-link-button {
                             display: inline-block;
-                            background-color: black;
+                            background-color: blue;
                             color: white !important;
                             padding: 0.6rem 1.2rem;
                             border-radius: 8px;
