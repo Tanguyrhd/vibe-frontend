@@ -165,4 +165,4 @@ else:
         """, unsafe_allow_html=True)
     st.markdown('<a href="/pages/1_🤝_Compatibility_Results.py" class="custom-link-button">➡️ See Compatibility →</a>', unsafe_allow_html=True)
 
-    st.button("➡️ See Compatibility →", on_click=lambda: st.switch_page("pages/1_🤝_Compatibility_Results.py"))
+    st.button("➡️ See Compatibility →", on_click=lambda: st.page_link("pages/1_🤝_Compatibility_Results.py"))
