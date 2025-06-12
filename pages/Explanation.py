@@ -95,12 +95,13 @@ if not mbti_1 or not mbti_2:
     st.page_link("streamlit_app.py", label="← Go to Main Page")
 else:
     st.markdown("""
+    <div class="opaque-box">
     <span style="font-size:1.5em">
     - <b>E</b> for Extraversion  VS  <b>I</b> for Introversion <br>
     - <b>S</b> for Sensing  VS  <b>N</b> for Intuition <br>
     - <b>T</b> for Thinking  VS  <b>F</b> for Feeling <br>
     - <b>J</b> for Judging  VS  <b>P</b> for Perceiving <br>
-    </span>
+    </span></div>
     """, unsafe_allow_html=True)
 
     st.subheader("Your Results")
