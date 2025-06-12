@@ -170,3 +170,5 @@ st.markdown("""
         </style>
     """, unsafe_allow_html=True)
 st.markdown('<a href="/pages/Explanation.py" class="custom-link-button">➡️ See Explanation →</a>', unsafe_allow_html=True)
+
+st.button("➡️ See Explanation →", on_click=lambda: st.switch_page("pages/Explanation.py"))
