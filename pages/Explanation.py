@@ -144,5 +144,23 @@ else:
                 </div>""", unsafe_allow_html=True)
 
     st.markdown("---")
-    st.markdown(f'<div class="blue-opaque-box"><b> SEE COMPATIBILITY </b>', unsafe_allow_html=True)
-    st.page_link("pages/1_🤝_Compatibility_Results.py", label="➡️ CLICK HERE")
+    st.markdown("""
+            <style>
+            .custom-link-button {
+                display: inline-block;
+                background-color: rgba(0, 123, 255, 0.7);
+                color: white !important;
+                padding: 0.6rem 1.2rem;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: bold;
+                margin-top: 1rem;
+                transition: background-color 0.2s ease;
+            }
+
+            .custom-link-button:hover {
+                background-color: #333;
+            }
+            </style>
+        """, unsafe_allow_html=True)
+    st.markdown('<a href="/pages/1_🤝_Compatibility_Results.py" class="custom-link-button">➡️ See Compatibility →</a>', unsafe_allow_html=True)

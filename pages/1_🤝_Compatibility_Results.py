@@ -150,5 +150,23 @@ else:
 
     st.page_link("streamlit_app.py", label="← Try with different tweets", icon="🔁")
 
-st.markdown(f'<div class="blue-opaque-box"><b> SEE EXPLANATION </b>', unsafe_allow_html=True)
-st.page_link("pages/Explanation.py", label="➡️ CLICK HERE")
+st.markdown("""
+        <style>
+        .custom-link-button {
+            display: inline-block;
+            background-color: rgba(0, 123, 255, 0.7);
+            color: white !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .custom-link-button:hover {
+            background-color: #333;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+st.markdown('<a href="/pages/Explanation.py" class="custom-link-button">➡️ See Explanation →</a>', unsafe_allow_html=True)
